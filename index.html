@@ -6,8 +6,8 @@
 
   <!-- Primary SEO -->
   <title>Mrityunjay Ranjan — Free Web Apps, Calculators &amp; Open-Source Projects</title>
-  <meta name="description" content="Home of 20+ free online web apps and calculators — EMI, FD, SIP, income tax, BMI, password generator, QR code generator, Pomodoro timer, expense tracker — plus open-source automation frameworks and projects. Fast, free, no sign-up." />
-  <meta name="keywords" content="free online calculator, EMI calculator, FD calculator, SIP calculator, income tax calculator, BMI calculator, password generator, QR code generator, pomodoro timer, expense tracker, selenium framework, test automation, autotrader, Mrityunjay Ranjan" />
+  <meta name="description" content="RealHands — a free WhatsApp-based labour marketplace connecting skilled and daily-wage workers (masons, electricians, plumbers, carpenters, drivers, security guards) with employers nearby across India, in Hindi &amp; English. Plus 20+ free web apps and calculators — EMI, FD, SIP, income tax, BMI, password &amp; QR generators — and open-source projects." />
+  <meta name="keywords" content="RealHands, hire workers near me, find work near me, daily wage jobs India, labour marketplace India, hire electrician plumber mason carpenter driver, WhatsApp jobs, skilled workers India, मजदूर काम, free online calculator, EMI calculator, FD calculator, SIP calculator, income tax calculator, BMI calculator, password generator, QR code generator, pomodoro timer, expense tracker, selenium framework, test automation, Mrityunjay Ranjan" />
   <meta name="author" content="Mrityunjay Ranjan" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mrityunjay.github.io/" />
@@ -30,6 +30,20 @@
     "url": "https://mrityunjay.github.io/",
     "sameAs": ["https://github.com/mrityunjay"],
     "jobTitle": "Software Engineer"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "RealHands",
+    "url": "https://mrityunjay.github.io/realhands/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, WhatsApp",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "description": "A free WhatsApp-based labour marketplace that connects skilled and daily-wage workers — masons, electricians, plumbers, carpenters, drivers and security guards — with employers nearby across India, in Hindi and English.",
+    "areaServed": "IN",
+    "inLanguage": ["en", "hi"]
   }
   </script>
 
@@ -138,6 +152,35 @@
     .section-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 8px 0 16px; }
     .empty-msg { color: var(--muted); text-align: center; padding: 40px; grid-column: 1/-1; }
 
+    /* Featured spotlight */
+    .spotlight {
+      position: relative; border-radius: 22px; padding: 2px;
+      background: linear-gradient(120deg, var(--a1), var(--a2), var(--a3), var(--a1));
+      background-size: 300% 300%; animation: shine 8s ease infinite;
+      margin: 8px 0 40px; box-shadow: 0 24px 70px rgba(124,92,255,0.28);
+    }
+    @keyframes shine { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    .spotlight-inner {
+      background: #0c1120; border-radius: 20px; padding: 34px 36px;
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: center;
+    }
+    .spotlight .flag { display:inline-flex; align-items:center; gap:7px; font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#ffd166; margin-bottom:14px; }
+    .spotlight h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); line-height:1.1; margin-bottom: 12px; }
+    .spotlight h2 .grad { background:linear-gradient(120deg,var(--a3),var(--a2)); -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent; }
+    .spotlight p { color: #c2c8d8; font-size: 0.98rem; line-height: 1.6; margin-bottom: 20px; }
+    .spotlight .tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:22px; }
+    .spotlight .tags span { font-size:0.74rem; color:var(--muted); border:1px solid var(--border); border-radius:999px; padding:4px 11px; }
+    .cta { display:flex; flex-wrap:wrap; gap:10px; }
+    .cta a { text-decoration:none; padding:12px 20px; border-radius:11px; font-weight:600; font-size:0.92rem; transition:0.18s; }
+    .cta a.primary { background:linear-gradient(120deg,var(--a1),var(--a2)); color:#fff; }
+    .cta a.primary:hover { filter:brightness(1.12); transform:translateY(-2px); }
+    .cta a.secondary { color:var(--text); border:1px solid var(--border); }
+    .cta a.secondary:hover { border-color:var(--a3); color:var(--a3); }
+    .spotlight-visual { text-align:center; }
+    .spotlight-visual .big { font-size:5rem; line-height:1; filter:drop-shadow(0 10px 30px rgba(255,92,168,0.4)); }
+    .spotlight-visual .cap { display:block; margin-top:10px; color:var(--muted); font-size:0.85rem; }
+    @media (max-width: 760px) { .spotlight-inner { grid-template-columns:1fr; text-align:center; } .spotlight-visual{order:-1;} .cta{justify-content:center;} .spotlight .flag,.spotlight .tags{justify-content:center;} }
+
     footer { text-align: center; padding: 40px 20px 60px; color: var(--muted); font-size: 0.85rem; }
     footer a { color: var(--a3); text-decoration: none; }
   </style>
@@ -157,6 +200,29 @@
   </header>
 
   <div class="wrap">
+    <section class="spotlight" aria-label="Featured project: RealHands">
+      <div class="spotlight-inner">
+        <div>
+          <span class="flag">⭐ Featured Project</span>
+          <h2>RealHands — <span class="grad">find work &amp; hire skilled workers near you</span></h2>
+          <p>A <strong>free, WhatsApp-based labour marketplace for India</strong>. RealHands connects masons, electricians, plumbers, carpenters, painters, drivers, security guards and daily-wage workers with employers nearby — no app download, no fees, available in <strong>Hindi &amp; English</strong>. Post a job in seconds or register to start getting work today.</p>
+          <div class="tags">
+            <span>Hire workers near me</span><span>Daily-wage jobs</span><span>WhatsApp powered</span><span>Hindi &amp; English</span><span>100% free</span>
+          </div>
+          <div class="cta">
+            <a class="primary" href="https://mrityunjay.github.io/realhands/" target="_blank" rel="noopener">Open RealHands ↗</a>
+            <a class="secondary" href="https://mrityunjay.github.io/realhands/register-worker.html" target="_blank" rel="noopener">I want work</a>
+            <a class="secondary" href="https://mrityunjay.github.io/realhands/register-company.html" target="_blank" rel="noopener">I want to hire</a>
+            <a class="secondary" href="https://github.com/mrityunjay/realhands" target="_blank" rel="noopener">Code ↗</a>
+          </div>
+        </div>
+        <div class="spotlight-visual">
+          <span class="big">🤝</span>
+          <span class="cap">Connecting hands to work, across India</span>
+        </div>
+      </div>
+    </section>
+
     <div class="controls">
       <input type="text" id="search" placeholder="🔍  Search apps and projects…" aria-label="Search" />
       <div class="chips" id="chips">
