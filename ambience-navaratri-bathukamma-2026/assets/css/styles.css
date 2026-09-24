@@ -307,6 +307,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 .feature-card p { color: var(--muted); font-size: .92rem; margin-bottom: 14px; }
 .link-arrow { color: var(--accent); font-weight: 600; font-size: .9rem; transition: gap .2s; }
 .link-arrow:hover { text-decoration: underline; }
+.soon-badge { display: inline-block; align-self: flex-start; padding: 9px 16px; border-radius: 999px; font-size: .82rem; font-weight: 600; color: var(--muted); background: rgba(122,12,31,.05); border: 1px dashed var(--line); }
 
 .parayanam { margin-top: 34px; background: linear-gradient(135deg, var(--maroon), var(--maroon-deep)); color: #fff; border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow-md); }
 .parayanam h3 { color: var(--gold-soft); margin-bottom: 6px; font-size: 1.4rem; }

@@ -15,10 +15,18 @@ const CONFIG = {
   // NOTE: set the Sheet's sharing to "Anyone with the link — Viewer" (not Editor).
   sheetView: "https://docs.google.com/spreadsheets/d/1fKaKQjThN3Vm_C4nTHZfL16SZ2uCuHGpwzqKRHgHiMw/edit?gid=15340882#gid=15340882",
 
-  // Replace these "#" links with your real WhatsApp / registration URLs
+  // Registration/sign-up Google Forms. Add URLs as they become available;
+  // leave "" to show a "Coming soon" state on the site.
+  forms: {
+    puja:        "https://forms.gle/XfCvJ87piS59FZ3C6",  // Puja registration
+    sponsorship: "",                                     // Sponsorship form
+    saree:       "",                                     // Saree form
+    cultural:    "",                                     // Cultural activity form
+  },
+
+  // Replace with your real WhatsApp link
   links: {
     whatsapp: "#",        // WhatsApp community invite link
-    poojaRegister: "https://forms.gle/XfCvJ87piS59FZ3C6",   // Pooja registration form
   },
 };
 
@@ -239,6 +247,28 @@ function buildCulturals() {
   });
 }
 
+/* ---------- BUILD: Forms & sign-ups ---------- */
+function buildForms() {
+  const grid = $("#formsGrid");
+  if (!grid) return;
+  const FORMS = [
+    { icon: "🪔", title: "Puja Registration",  desc: "Daily &amp; special poojas, couples pooja and kids Saraswati pooja.", url: CONFIG.forms.puja },
+    { icon: "🙏", title: "Sponsorship",        desc: "Sponsor prasadam, annadanam, flowers, homam and decorations.",       url: CONFIG.forms.sponsorship },
+    { icon: "🥻", title: "Saree Registration", desc: "Sign up for the community saree / dress-code coordination.",          url: CONFIG.forms.saree },
+    { icon: "🎭", title: "Cultural Activity",  desc: "Perform on stage — dance, music, drama, Garba &amp; Dandiya.",        url: CONFIG.forms.cultural },
+  ];
+  FORMS.forEach((f, i) => {
+    const card = el("article", "feature-card reveal");
+    card.style.transitionDelay = (i % 4) * 50 + "ms";
+    const live = f.url && f.url !== "#";
+    const cta = live
+      ? `<a class="btn btn-primary" href="${f.url}" target="_blank" rel="noopener">Open form ↗</a>`
+      : `<span class="soon-badge">Coming soon</span>`;
+    card.innerHTML = `<div class="fc-icon">${f.icon}</div><h3>${f.title}</h3><p>${f.desc}</p>${cta}`;
+    grid.appendChild(card);
+  });
+}
+
 /* ---------- BUILD: Blocks ---------- */
 function buildBlocks() {
   const grid = $("#blocksGrid");
@@ -416,8 +446,8 @@ function wireLinks() {
   // "Check your entry" → read-only Google Sheet
   if (CONFIG.sheetView) $$(".js-view-sheet").forEach(a => { a.href = CONFIG.sheetView; });
   // "Register for a pooja" → registration Google Form
-  if (CONFIG.links.poojaRegister && CONFIG.links.poojaRegister !== "#")
-    $$(".js-register").forEach(a => { a.href = CONFIG.links.poojaRegister; a.target = "_blank"; a.rel = "noopener"; });
+  if (CONFIG.forms.puja && CONFIG.forms.puja !== "#")
+    $$(".js-register").forEach(a => { a.href = CONFIG.forms.puja; a.target = "_blank"; a.rel = "noopener"; });
 }
 
 /* ---------- Floating petals ---------- */
@@ -442,6 +472,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buildBathukamma();
   buildSchedule();
   buildCulturals();
+  buildForms();
   buildBlocks();
   buildGallery();
   initLightbox();
