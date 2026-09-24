@@ -18,7 +18,7 @@ const CONFIG = {
   // Replace these "#" links with your real WhatsApp / registration URLs
   links: {
     whatsapp: "#",        // WhatsApp community invite link
-    poojaRegister: "#",   // Pooja registration form
+    poojaRegister: "https://forms.gle/XfCvJ87piS59FZ3C6",   // Pooja registration form
   },
 };
 
@@ -415,6 +415,9 @@ function wireLinks() {
   if (CONFIG.donationForm) $$(".js-donate-form").forEach(a => { a.href = CONFIG.donationForm; });
   // "Check your entry" → read-only Google Sheet
   if (CONFIG.sheetView) $$(".js-view-sheet").forEach(a => { a.href = CONFIG.sheetView; });
+  // "Register for a pooja" → registration Google Form
+  if (CONFIG.links.poojaRegister && CONFIG.links.poojaRegister !== "#")
+    $$(".js-register").forEach(a => { a.href = CONFIG.links.poojaRegister; a.target = "_blank"; a.rel = "noopener"; });
 }
 
 /* ---------- Floating petals ---------- */
