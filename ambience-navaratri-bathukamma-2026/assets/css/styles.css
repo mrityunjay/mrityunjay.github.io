@@ -357,6 +357,7 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 .gallery-item:hover img { transform: scale(1.08); }
 .gallery-item:hover::after { opacity: 1; }
 .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+.gallery-cta { text-align: center; margin-top: 26px; }
 
 /* ---------- Donation modal + form ---------- */
 .modal {
@@ -472,6 +473,27 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
   .reveal { opacity: 1 !important; transform: none !important; }
   .hero-bg img, .petal, .scroll-arrow::after { animation: none !important; }
 }
+
+/* ---------- Memories page ---------- */
+.mem-hero {
+  position: relative; padding: calc(var(--header-h) + 60px) 0 60px; text-align: center; color: #fff;
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-deep) 100%); overflow: hidden;
+}
+.mem-hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(224,163,38,.16) 1px, transparent 1.6px); background-size: 24px 24px; opacity: .5; }
+.mem-hero .container { position: relative; }
+.mem-hero .eyebrow { color: var(--gold-soft); }
+.mem-hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); margin: 8px 0 12px; }
+.mem-hero h1 .grad { -webkit-text-fill-color: transparent; }
+.mem-hero p { max-width: 620px; margin: 0 auto; opacity: .92; }
+.mem-back { display: inline-flex; align-items: center; gap: 6px; margin-top: 22px; color: #fff; border: 1px solid rgba(255,255,255,.5); padding: 9px 18px; border-radius: 999px; font-size: .9rem; transition: background .2s; }
+.mem-back:hover { background: rgba(255,255,255,.14); }
+
+.year-block { margin-bottom: 20px; }
+.year-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
+.year-head h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--maroon); }
+.year-badge { background: linear-gradient(120deg, var(--gold), var(--accent-2)); color: #fff; font-weight: 700; border-radius: 999px; padding: 5px 14px; font-size: .8rem; }
+.year-note { color: var(--muted); }
+.mem-empty { text-align: center; color: var(--muted); border: 1.5px dashed var(--line); border-radius: var(--radius); padding: 40px 20px; }
 
 /* ============================================================
    Responsive — tablet & up

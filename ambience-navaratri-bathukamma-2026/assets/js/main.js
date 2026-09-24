@@ -91,6 +91,9 @@ const CULTURALS = [
 const BLOCKS = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
 
 const GALLERY = [
+  { src: "assets/img/2024-idol-bathukamma.jpg", cap: "2024 · Our very first Devi &amp; Bathukamma", wide: true },
+  { src: "assets/img/2024-devi-closeup.jpg",    cap: "2024 · Maa's darshan" },
+  { src: "assets/img/2024-puja.jpg",            cap: "2024 · Our first community puja" },
   { src: "assets/img/durga-1.jpg",      cap: "Maa Durga · Durga Puja",           wide: true },
   { src: "assets/img/bathukamma-2.jpg", cap: "Bathukamma — festival of flowers" },
   { src: "assets/img/garba-1.jpg",      cap: "Garba night, Navratri" },
