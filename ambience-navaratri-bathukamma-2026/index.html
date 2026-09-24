@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#7a0c1f" />
+  <title>Navaratri &amp; Bathukamma 2026 · Ambience Courtyard</title>
+  <meta name="description" content="Nine nights of Devi, nine days of flowers. Navaratri &amp; Bathukamma 2026 at Ambience Courtyard, Manikonda — 10 to 21 October 2026. Pooja, Golu, Garba, Bathukamma and culturals for every family." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Navaratri & Bathukamma 2026 · Ambience Courtyard" />
+  <meta property="og:description" content="Nine nights of Devi, nine days of flowers — 10 to 21 October 2026 at Ambience Courtyard, Manikonda." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/durga-1.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%94%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Decorative floating petals / diyas layer -->
+  <div class="fx-layer" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="brand" aria-label="Home">
+        <span class="brand-mark">॥</span>
+        <span class="brand-text">
+          <strong>Navaratri &amp; Bathukamma</strong>
+          <em>2026 · Ambience Courtyard</em>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#navadurga">Navadurga</a></li>
+        <li><a href="#bathukamma">Bathukamma</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#participate">Participate</a></li>
+        <li><a href="#culturals">Culturals</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a class="nav-cta" href="#contribute">Contribute</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="assets/img/durga-1.jpg" alt="Idol of Goddess Durga during Durga Puja" loading="eager" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content container">
+      <p class="hero-sanskrit reveal">॥ या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता ॥</p>
+      <p class="hero-kicker reveal">10 – 21 October 2026 · Ambience Courtyard, Manikonda</p>
+      <h1 class="hero-title reveal">
+        Nine Nights of <span class="grad">Devi</span>,<br />
+        Nine Days of <span class="grad">Flowers</span>
+      </h1>
+      <p class="hero-sub reveal">
+        Navaratri &amp; Bathukamma come home to the Courtyard. Twelve days of pooja, Golu, Garba,
+        Bathukamma and culturals — a place for every family to take part.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#contribute">Contribute now</a>
+        <a class="btn btn-ghost" href="#schedule">View schedule</a>
+        <a class="btn btn-ghost" href="#participate">Register for a pooja</a>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div class="cd-unit"><span class="cd-num" data-cd="days">--</span><span class="cd-label">Days</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" data-cd="hours">--</span><span class="cd-label">Hours</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" data-cd="minutes">--</span><span class="cd-label">Mins</span></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" data-cd="seconds">--</span><span class="cd-label">Secs</span></div>
+      </div>
+      <p class="countdown-note reveal" id="countdownNote">until the festivities begin</p>
+    </div>
+
+    <a href="#welcome" class="scroll-hint" aria-label="Scroll down">
+      <span>Scroll</span>
+      <span class="scroll-arrow"></span>
+    </a>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats" aria-label="At a glance">
+    <div class="container stats-grid">
+      <div class="stat reveal"><span class="stat-num" data-count="12">0</span><span class="stat-label">Days of celebration</span></div>
+      <div class="stat reveal"><span class="stat-num" data-count="9">0</span><span class="stat-label">Nights of Devi</span></div>
+      <div class="stat reveal"><span class="stat-num" data-count="9">0</span><span class="stat-label">Forms of Durga</span></div>
+      <div class="stat reveal"><span class="stat-num" data-count="1000" data-suffix="+">0</span><span class="stat-label">Families invited</span></div>
+    </div>
+  </section>
+
+  <!-- ============ WELCOME / INVITATION ============ -->
+  <section class="section welcome" id="welcome">
+    <div class="container welcome-grid">
+      <div class="welcome-media reveal">
+        <img src="assets/img/durga-2.jpg" alt="Goddess Durga worshipped in a decorated pandal" loading="lazy" />
+        <div class="welcome-badge">🪔 <span>Devi is coming home</span></div>
+      </div>
+      <div class="welcome-text">
+        <p class="eyebrow reveal">The invitation</p>
+        <h2 class="reveal">Sri Devi Sharannavaratri</h2>
+        <p class="reveal">
+          Dear residents — with the blessings of Maa Durga, we warmly invite every family of Ambience
+          Courtyard to come together for <strong>Navaratri &amp; Bathukamma 2026</strong>. From
+          Bathukamma's first blooms on <strong>10 October</strong>, through the nine nights of Navratri
+          (<strong>11–19 October</strong>), to Vijayadashami on <strong>20 October</strong>, let us
+          celebrate as one family — with devotion, colour, music and togetherness.
+        </p>
+        <p class="reveal">
+          Navaratri honours the nine forms of the Goddess across nine sacred nights, while
+          Bathukamma — the beautiful flower festival of Telangana — blooms alongside it, day by day,
+          in the hands of our women and children. Both come together here at the Courtyard.
+        </p>
+        <div class="info-cards reveal">
+          <div class="info-card">
+            <span class="ic-emoji">📅</span>
+            <div><strong>Ghatasthapana</strong><span>Sunday, 11 October · 6:30 AM</span></div>
+          </div>
+          <div class="info-card">
+            <span class="ic-emoji">📍</span>
+            <div><strong>Venue</strong><span>Community Amphitheatre &amp; Mandapam</span></div>
+          </div>
+          <div class="info-card">
+            <span class="ic-emoji">🌺</span>
+            <div><strong>Vijayadashami</strong><span>Tuesday, 20 October</span></div>
+          </div>
+        </div>
+        <a class="btn btn-primary reveal" href="#schedule">See the full schedule</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NAVADURGA — 9 FORMS + COLOR SWITCHER ============ -->
+  <section class="section navadurga" id="navadurga">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Nine days, nine forms · 11–19 Oct</p>
+        <h2 class="reveal">The Navadurga</h2>
+        <p class="section-lead reveal">
+          Sharad Navratri 2026 honours a different form of the Goddess each day — with its own colour.
+          Tap a day to dress the whole page in its colour, and wear it to the celebrations!
+        </p>
+      </div>
+
+      <div class="durga-grid" id="durgaGrid">
+        <!-- cards injected by JS from data; static fallback below -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BATHUKAMMA — 9 DAYS ============ -->
+  <section class="section bathukamma" id="bathukamma">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">The festival of flowers</p>
+        <h2 class="reveal">Bathukamma — Nine Days of Blooms</h2>
+        <p class="section-lead reveal">
+          Bathukamma is Telangana's floral festival, celebrated by women and girls who arrange
+          seasonal flowers in beautiful concentric tiers, sing, and dance around them. It unfolds over
+          nine days, each with its own name and naivedyam (offering).
+        </p>
+      </div>
+
+      <div class="bathu-feature reveal">
+        <div class="bathu-feature-media">
+          <img src="assets/img/bathukamma-2.jpg" alt="Colourful Bathukamma flower arrangement" loading="lazy" />
+        </div>
+        <div class="bathu-feature-text">
+          <h3>Saddula Bathukamma — the grand finale</h3>
+          <p>
+            The nine days culminate in <strong>Saddula (Pedda) Bathukamma</strong> on 18 October — the
+            largest and most joyful evening, when the whole community gathers with towering flower
+            stacks, songs and dance before immersing them in water.
+          </p>
+          <p class="bathu-flowers"><span>Tangedu</span><span>Gunugu</span><span>Marigold</span><span>Chamanti</span><span>Lotus</span></p>
+        </div>
+      </div>
+
+      <ol class="bathu-timeline" id="bathuTimeline">
+        <!-- injected by JS -->
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE ============ -->
+  <section class="section schedule" id="schedule">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Day by day</p>
+        <h2 class="reveal">Festival Schedule</h2>
+        <p class="section-lead reveal">
+          From Kalash Sthapana on 10 October to Vijayadashami on 21 October. Filter by what interests
+          your family. Special poojas need a quick registration — tap Register under Participate.
+        </p>
+      </div>
+
+      <div class="filter-bar reveal" role="tablist" aria-label="Filter schedule">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="pooja">Pooja</button>
+        <button class="chip" data-filter="bathukamma">Bathukamma</button>
+        <button class="chip" data-filter="cultural">Culturals</button>
+        <button class="chip" data-filter="special">Special</button>
+      </div>
+
+      <div class="timeline" id="scheduleList">
+        <!-- injected by JS -->
+      </div>
+      <p class="note reveal">Programmes are tentative and may shift with final registrations and weather.</p>
+    </div>
+  </section>
+
+  <!-- ============ PARTICIPATE ============ -->
+  <section class="section participate" id="participate">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Take part</p>
+        <h2 class="reveal">Participate in the Celebrations</h2>
+        <p class="section-lead reveal">Every day is a chance to pray, play and celebrate. Pick what suits your family and register in a minute.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="feature-card reveal">
+          <div class="fc-icon">👫</div>
+          <h3>Daily Couples Pooja</h3>
+          <p>Perform the evening Devi pooja on stage with your spouse. Slots at 7:00 PM every evening, 10 – 21 October.</p>
+          <a class="link-arrow" href="#contribute">Choose your day →</a>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fc-icon">🌺</div>
+          <h3>Special Poojas</h3>
+          <p>Lalitha Sahasranama Kumkumarchana, Saraswati Pooja, Durgashtami Homam and Chandi Homam on Navami.</p>
+          <a class="link-arrow" href="#schedule">See dates →</a>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fc-icon">🪆</div>
+          <h3>Bommala Koluvu (Golu)</h3>
+          <p>Display your Golu at the community Golu gallery. Register your steps and theme; kids specially welcome.</p>
+          <a class="link-arrow" href="#contribute">Register Golu →</a>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fc-icon">💃</div>
+          <h3>Garba &amp; Dandiya Nights</h3>
+          <p>Dress in your dandiya best and dance under the lights. Community Garba on 14 &amp; 17 October, 8 PM.</p>
+          <a class="link-arrow" href="#culturals">See culturals →</a>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fc-icon">🌼</div>
+          <h3>Bathukamma Aata</h3>
+          <p>Women &amp; girls, bring your Bathukamma every evening at 6 PM to the lawns — and for the grand Saddula finale.</p>
+          <a class="link-arrow" href="#bathukamma">Learn more →</a>
+        </article>
+        <article class="feature-card reveal">
+          <div class="fc-icon">📚</div>
+          <h3>Kids Saraswati Pooja</h3>
+          <p>A special pooja for the children of the Courtyard on 19 October, 7 PM — bring their books and slates.</p>
+          <a class="link-arrow" href="#contribute">Register your child →</a>
+        </article>
+      </div>
+
+      <div class="parayanam reveal">
+        <h3>📿 Parayanams — open to all</h3>
+        <p>No registration needed. Just come to the Mandapam.</p>
+        <ul>
+          <li><strong>Devi Mahatmyam (Durga Saptashati)</strong> · Every day · 5:30 PM</li>
+          <li><strong>Lalitha Sahasranama</strong> · Every day · 6:00 PM · Sri Matre Namah group</li>
+          <li><strong>Sri Suktam &amp; Devi Stotram</strong> · Daily before evening aarti</li>
+        </ul>
+        <a class="btn btn-primary" href="#contribute">Join the WhatsApp updates group</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CULTURALS ============ -->
+  <section class="section culturals" id="culturals">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Six evenings on stage</p>
+        <h2 class="reveal">Cultural Programme</h2>
+        <p class="section-lead reveal">
+          Performances by residents of all ages at the Amphitheatre — dance, music, drama and, of
+          course, Garba &amp; Dandiya. Want to perform? Contact the Cultural Committee via your block group.
+        </p>
+      </div>
+
+      <div class="cult-note reveal">
+        <span>📍 Amphitheatre</span>
+        <span>🌧️ Shifts to the Clubhouse if it rains</span>
+        <span>🎟️ To perform, contact your block SPOC</span>
+      </div>
+
+      <div class="cult-grid" id="culturalsList">
+        <!-- injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTRIBUTE ============ -->
+  <section class="section contribute" id="contribute">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Seva &amp; support</p>
+        <h2 class="reveal">Contribute to the Celebrations</h2>
+        <p class="section-lead reveal">
+          Every contribution, big or small, is a heartfelt offering that makes this celebration
+          meaningful for our whole community. Pay your block collector by UPI or cash, then log it so
+          your Gotra &amp; Namam reach the daily sankalpam.
+        </p>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step"><span class="step-n">1</span><p>Pick your block and pay any collector. Tap a UPI ID to copy, or a number to call.</p></div>
+        <div class="step"><span class="step-n">2</span><p>Keep the transaction reference, or hand cash to the volunteer.</p></div>
+        <div class="step"><span class="step-n">3</span><p>Open the donation form below and log your flat, amount and transaction reference.</p></div>
+      </div>
+
+      <div class="contribute-panel reveal">
+        <div class="cp-form">
+          <h3>Navaratri &amp; Bathukamma 2026 Donation form</h3>
+          <p>Takes about a minute on our Google Form. You'll be asked for:</p>
+          <p class="tags">
+            <span>Name</span><span>Block</span><span>Flat no.</span><span>Amount</span>
+            <span>Volunteer paid</span><span>Cash / online</span><span>Txn ref.</span>
+          </p>
+          <div class="cp-actions">
+            <a class="btn btn-primary js-donate-form" href="#" target="_blank" rel="noopener">Open the donation form ↗</a>
+            <a class="btn btn-outline js-view-sheet" href="#" target="_blank" rel="noopener">Check your entry ↗</a>
+          </div>
+          <p class="micro">The form saves straight to the committee's Google Sheet — tap <strong>Check your entry</strong> to see the live list anytime.</p>
+        </div>
+        <div class="cp-tiers">
+          <h3>Seva options</h3>
+          <ul class="tier-list">
+            <li><span>Prasadam sponsorship (per day)</span><strong>₹5,116</strong></li>
+            <li><span>Evening annadanam (per day)</span><strong>₹11,116</strong></li>
+            <li><span>Flower &amp; decoration seva</span><strong>₹2,516</strong></li>
+            <li><span>Chandi Homam sponsorship</span><strong>₹21,116</strong></li>
+            <li><span>General contribution</span><strong>Any amount</strong></li>
+          </ul>
+          <p class="micro">Sponsorship is completely voluntary. Slots confirmed on a first-come basis.</p>
+        </div>
+      </div>
+
+      <div class="blocks reveal">
+        <h3>Which block are you in?</h3>
+        <div class="blocks-grid" id="blocksGrid"><!-- injected by JS --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow reveal">Glimpses</p>
+        <h2 class="reveal">Gallery</h2>
+        <p class="section-lead reveal">A glimpse of the devotion and colour. Tap any image to view.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"><!-- injected by JS --></div>
+      <p class="credit">Photos: Wikimedia Commons contributors (CC BY-SA). Replace with your community's own photos — see README.</p>
+    </div>
+  </section>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img class="lb-img" id="lbImg" src="" alt="" />
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+    <p class="lb-caption" id="lbCaption"></p>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="community">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-mark">॥</span>
+        <h3>Navaratri &amp; Bathukamma 2026</h3>
+        <p>10 – 21 October · Ambience Courtyard, Manikonda</p>
+        <p class="footer-blessing">May Maa Durga bless every family of our community with strength, joy and prosperity.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#navadurga">Navadurga</a></li>
+          <li><a href="#bathukamma">Bathukamma</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#culturals">Culturals</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get involved</h4>
+        <ul>
+          <li><a href="#participate">Register for a pooja</a></li>
+          <li><a href="#" class="js-donate-form" target="_blank" rel="noopener">Donation form</a></li>
+          <li><a href="#" data-form="whatsapp">WhatsApp updates</a></li>
+          <li><a href="#" class="js-view-sheet" target="_blank" rel="noopener">Check your entry</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Committee SPOCs</h4>
+        <ul class="footer-contacts">
+          <li><a href="tel:+910000000000">Cultural · 00000 00000</a></li>
+          <li><a href="tel:+910000000000">Pooja · 00000 00000</a></li>
+          <li><a href="tel:+910000000000">Contributions · 00000 00000</a></li>
+        </ul>
+        <p class="micro">Replace with real names &amp; numbers — see README.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Ambience Courtyard Navaratri &amp; Bathukamma Committee 2026 · Made with devotion 🌺</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
