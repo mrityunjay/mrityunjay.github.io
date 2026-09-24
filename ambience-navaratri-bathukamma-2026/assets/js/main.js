@@ -88,7 +88,18 @@ const CULTURALS = [
   { d: 21, m: "Oct", t: "7:00 PM", title: "Culturals Grand Finale & Feast", desc: "Dance, music, drama, prize distribution and community dinner." },
 ];
 
-const BLOCKS = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+// Per-block collectors. Replace collector/phone/upi with real details.
+const BLOCKS = [
+  { b: "A", collector: "Collector name", phone: "+910000000000", upi: "blocka@upi" },
+  { b: "B", collector: "Collector name", phone: "+910000000000", upi: "blockb@upi" },
+  { b: "C", collector: "Collector name", phone: "+910000000000", upi: "blockc@upi" },
+  { b: "D", collector: "Collector name", phone: "+910000000000", upi: "blockd@upi" },
+  { b: "E", collector: "Collector name", phone: "+910000000000", upi: "blocke@upi" },
+  { b: "F", collector: "Collector name", phone: "+910000000000", upi: "blockf@upi" },
+  { b: "G", collector: "Collector name", phone: "+910000000000", upi: "blockg@upi" },
+  { b: "H", collector: "Collector name", phone: "+910000000000", upi: "blockh@upi" },
+  { b: "I", collector: "Collector name", phone: "+910000000000", upi: "blocki@upi" },
+];
 
 const GALLERY = [
   { src: "assets/img/2024-idol-bathukamma.jpg", cap: "2024 · Our very first Devi &amp; Bathukamma", wide: true },
@@ -112,6 +123,23 @@ const GALLERY = [
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+function copyText(text) {
+  // best-effort, non-blocking copy (never awaited so UI feedback is instant)
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(() => legacyCopy(text));
+      return;
+    }
+  } catch (_) {}
+  legacyCopy(text);
+}
+function legacyCopy(text) {
+  const t = document.createElement("textarea");
+  t.value = text; t.style.position = "fixed"; t.style.opacity = "0";
+  document.body.appendChild(t); t.select();
+  try { document.execCommand("copy"); } catch (_) {}
+  t.remove();
+}
 
 /* ---------- BUILD: Navadurga ---------- */
 function buildNavadurga() {
@@ -214,11 +242,43 @@ function buildCulturals() {
 /* ---------- BUILD: Blocks ---------- */
 function buildBlocks() {
   const grid = $("#blocksGrid");
-  BLOCKS.forEach(b => {
-    const pill = el("div", "block-pill reveal");
-    pill.innerHTML = `<span class="bl">${b}</span><span class="bn">Block ${b}</span>`;
+  BLOCKS.forEach((blk, i) => {
+    const pill = el("button", "block-pill reveal");
+    pill.type = "button";
+    pill.setAttribute("aria-expanded", "false");
+    pill.innerHTML = `<span class="bl">${blk.b}</span><span class="bn">Block ${blk.b}</span>`;
+    pill.addEventListener("click", () => showBlock(i, pill));
     grid.appendChild(pill);
   });
+}
+
+function showBlock(i, pill) {
+  const blk = BLOCKS[i];
+  const detail = $("#blockDetail");
+  const isActive = pill.classList.contains("active");
+  $$(".block-pill").forEach(p => { p.classList.remove("active"); p.setAttribute("aria-expanded", "false"); });
+
+  if (isActive) { detail.hidden = true; detail.innerHTML = ""; return; } // toggle off
+
+  pill.classList.add("active");
+  pill.setAttribute("aria-expanded", "true");
+  detail.hidden = false;
+  detail.innerHTML = `
+    <div class="bd-head">Block ${blk.b} · Collector</div>
+    <div class="bd-name">${blk.collector}</div>
+    <div class="bd-actions">
+      <a class="btn btn-primary" href="tel:${blk.phone.replace(/\s+/g, "")}">📞 Call</a>
+      <button class="btn btn-outline" type="button" id="bdCopy">UPI: ${blk.upi} ⧉</button>
+    </div>
+    <p class="bd-copied" id="bdCopied" hidden>UPI copied ✓</p>`;
+
+  $("#bdCopy").addEventListener("click", () => {
+    copyText(blk.upi);
+    const msg = $("#bdCopied"); msg.hidden = false;
+    setTimeout(() => { msg.hidden = true; }, 1800);
+  });
+
+  detail.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 /* ---------- BUILD: Gallery + Lightbox ---------- */

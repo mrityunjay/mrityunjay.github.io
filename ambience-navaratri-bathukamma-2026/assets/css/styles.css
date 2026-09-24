@@ -349,12 +349,20 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 .tier-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: .92rem; color: var(--muted); }
 .tier-list li strong { color: var(--accent); white-space: nowrap; }
 
-.blocks h3 { color: var(--maroon); margin-bottom: 16px; text-align: center; }
+.blocks h3 { color: var(--maroon); margin-bottom: 6px; text-align: center; }
+.blocks-hint { text-align: center; color: var(--muted); font-size: .86rem; margin-bottom: 16px; }
 .blocks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.block-pill { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 8px; text-align: center; box-shadow: var(--shadow-sm); transition: all .25s var(--ease); cursor: default; }
+.block-pill { font-family: inherit; width: 100%; color: inherit; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 8px; text-align: center; box-shadow: var(--shadow-sm); transition: all .25s var(--ease); cursor: pointer; }
 .block-pill:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow-md); }
+.block-pill.active { border-color: var(--accent); background: linear-gradient(135deg, #fff, #fff0f2); transform: translateY(-2px); box-shadow: var(--shadow-md); }
 .block-pill .bl { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--accent); display: block; }
 .block-pill .bn { font-size: .72rem; color: var(--muted); }
+
+.block-detail { margin-top: 16px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); padding: 18px 20px; box-shadow: var(--shadow-sm); text-align: center; animation: fade .3s ease; }
+.bd-head { font-size: .72rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent); font-weight: 700; }
+.bd-name { font-family: var(--font-alt); font-size: 1.3rem; color: var(--maroon); margin: 4px 0 14px; }
+.bd-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.bd-copied { color: #0a7a5c; font-weight: 600; font-size: .85rem; margin-top: 10px; }
 
 /* ---------- Gallery ---------- */
 .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
