@@ -110,21 +110,23 @@ const BLOCKS = [
 ];
 
 const GALLERY = [
+  // 2025 ambience — Navaratri at Ambience Courtyard
+  { src: "assets/img/2025-day5.jpg",  cap: "2025 · Day 5 · Maa Skandamata — yellow silk &amp; marigolds", wide: true },
+  { src: "assets/img/2025-day8.jpg",  cap: "2025 · Durgashtami · Maa Mahagauri in golden green" },
+  { src: "assets/img/2025-day11.jpg", cap: "2025 · Grand finale — olive-green alankaram" },
+  { src: "assets/img/2025-day1.jpg",  cap: "2025 · Day 1 · Maa Shailaputri — blue saree &amp; marigold garland" },
+  { src: "assets/img/2025-day2.jpg",  cap: "2025 · Day 2 · Maa Brahmacharini — Bathukamma flower tower" },
+  { src: "assets/img/2025-day3.jpg",  cap: "2025 · Day 3 · Maa Chandraghanta — puja mandapam", wide: true },
+  { src: "assets/img/2025-day4.jpg",  cap: "2025 · Day 4 · Maa Kushmanda — grey-blue saree &amp; pooja thali" },
+  { src: "assets/img/2025-day6.jpg",  cap: "2025 · Day 6 · Maa Katyayani — red &amp; green alankaram" },
+  { src: "assets/img/2025-day7.jpg",  cap: "2025 · Day 7 · Maa Kalaratri — deep blue &amp; maroon" },
+  { src: "assets/img/2025-day8b.jpg", cap: "2025 · Durgashtami — wide-angle view with full puja spread" },
+  { src: "assets/img/2025-day9.jpg",  cap: "2025 · Mahanavami · Maa Siddhidatri — pink &amp; gold", wide: true },
+  { src: "assets/img/2025-day10.jpg", cap: "2025 · Vijayadashami · Maa in deep red — Dussehra darshan" },
+  // 2024 memories
   { src: "assets/img/2024-idol-bathukamma.jpg", cap: "2024 · Our very first Devi &amp; Bathukamma", wide: true },
   { src: "assets/img/2024-devi-closeup.jpg",    cap: "2024 · Maa's darshan" },
   { src: "assets/img/2024-puja.jpg",            cap: "2024 · Our first community puja" },
-  { src: "assets/img/durga-1.jpg",      cap: "Maa Durga · Durga Puja",           wide: true },
-  { src: "assets/img/bathukamma-2.jpg", cap: "Bathukamma — festival of flowers" },
-  { src: "assets/img/garba-1.jpg",      cap: "Garba night, Navratri" },
-  { src: "assets/img/durga-4.jpg",      cap: "Idol of Maa Durga" },
-  { src: "assets/img/bathukamma-1.jpg", cap: "Bathukamma at home" },
-  { src: "assets/img/diya-1.jpg",       cap: "Deepam — lamps of devotion" },
-  { src: "assets/img/bathukamma-3.jpg", cap: "Women & children celebrate Bathukamma", wide: true },
-  { src: "assets/img/durga-2.jpg",      cap: "Durga in the pandal" },
-  { src: "assets/img/garba-2.jpg",      cap: "Navratri festivities" },
-  { src: "assets/img/durga-5.jpg",      cap: "Devi darshan" },
-  { src: "assets/img/diya-2.jpg",       cap: "Diyas aglow" },
-  { src: "assets/img/durga-3.jpg",      cap: "Maa Durga idol" },
 ];
 
 /* ---------- HELPERS ---------- */
