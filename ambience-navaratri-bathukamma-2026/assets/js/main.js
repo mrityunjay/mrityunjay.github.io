@@ -320,7 +320,7 @@ function buildGallery() {
   GALLERY.forEach((g, i) => {
     const item = el("div", "gallery-item reveal" + (g.wide ? " wide" : ""));
     item.style.transitionDelay = (i % 3) * 50 + "ms";
-    item.innerHTML = `<img src="${g.src}" alt="${g.cap}" loading="lazy" />`;
+    item.innerHTML = `<img src="${g.src}" alt="${g.cap}" loading="lazy" /><span class="gallery-item-caption">${g.cap}</span>`;
     item.addEventListener("click", () => openLightbox(i));
     grid.appendChild(item);
   });

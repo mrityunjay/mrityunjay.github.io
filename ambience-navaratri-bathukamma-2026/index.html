@@ -476,6 +476,54 @@
   <!-- Back to top -->
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
+  <!-- Devotional background music -->
+  <audio id="bgMusic" loop preload="none">
+    <!-- Om Jai Jagdish Hare — royalty-free devotional loop from Internet Archive -->
+    <source src="https://ia803408.us.archive.org/4/items/om-jai-jagdish-hare-simple/om_jai_jagdish_hare.mp3" type="audio/mpeg" />
+  </audio>
+  <button class="music-btn" id="musicBtn" aria-label="Play devotional music" title="Play devotional music">🔔</button>
+
   <script src="assets/js/main.js"></script>
+  <script>
+    /* ---- Devotional music toggle ---- */
+    (function() {
+      const audio = document.getElementById("bgMusic");
+      const btn   = document.getElementById("musicBtn");
+      let started = false;
+
+      function startMusic() {
+        if (!started) {
+          // low volume for subtle background ambience
+          audio.volume = 0.22;
+          started = true;
+        }
+        audio.play().then(() => {
+          btn.textContent = "🔕";
+          btn.setAttribute("aria-label", "Mute devotional music");
+          btn.classList.add("playing");
+        }).catch(() => {});
+      }
+
+      btn.addEventListener("click", () => {
+        if (audio.paused) {
+          startMusic();
+        } else {
+          audio.pause();
+          btn.textContent = "🔔";
+          btn.setAttribute("aria-label", "Play devotional music");
+          btn.classList.remove("playing");
+        }
+      });
+
+      // Auto-play on first user interaction anywhere on page
+      function autoStart() {
+        if (audio.paused) startMusic();
+        document.removeEventListener("click", autoStart);
+        document.removeEventListener("touchstart", autoStart);
+      }
+      document.addEventListener("click", autoStart, { once: true });
+      document.addEventListener("touchstart", autoStart, { once: true });
+    })();
+  </script>
 </body>
 </html>
