@@ -470,7 +470,7 @@
     </div>
     <div class="footer-bottom">
       <p>Ambience Courtyard Navaratri &amp; Bathukamma Committee 2026 · Made with devotion 🌺</p>
-      <p class="visitor-count">🪔 Page visits: <span id="visitCount">…</span></p>
+      <p class="visitor-count">🪔 Page visits: <img src="https://visitor-badge.laobi.icu/badge?page_id=mrityunjay.ambience-navaratri-2026&left_color=%237a0c1f&right_color=%23c8860a&left_text=seen" alt="page visit count" class="visitor-badge" /></p>
     </div>
   </footer>
 
@@ -487,25 +487,6 @@
 
   <script src="assets/js/main.js"></script>
   <script>
-    /* ---- Visitor counter ---- */
-    (function() {
-      var el = document.getElementById('visitCount');
-      if (!el) return;
-      fetch('https://visitor-badge.laobi.icu/badge?page_id=mrityunjay.ambience-navaratri-2026')
-        .then(function(r) { return r.text(); })
-        .then(function(svg) {
-          // SVG contains the count as the last number in a <text> element
-          var matches = svg.match(/>(\d[\d,]*)</g);
-          if (matches && matches.length > 0) {
-            var last = matches[matches.length - 1].replace(/[><]/g, '');
-            el.textContent = parseInt(last, 10).toLocaleString();
-          } else {
-            el.textContent = '—';
-          }
-        })
-        .catch(function() { el.textContent = '—'; });
-    })();
-
     /* ---- Devotional music toggle ---- */
     (function() {
       const audio = document.getElementById("bgMusic");

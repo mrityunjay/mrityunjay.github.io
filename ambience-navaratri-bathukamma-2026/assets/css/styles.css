@@ -512,8 +512,8 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 .footer-col a { opacity: .85; font-size: .92rem; transition: opacity .2s, color .2s; }
 .footer-col a:hover { opacity: 1; color: var(--gold-soft); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.14); margin-top: 44px; padding: 20px 0; text-align: center; font-size: .82rem; opacity: .8; position: relative; }
-.visitor-count { margin-top: 8px; font-size: .82rem; opacity: .85; letter-spacing: .02em; }
-.visitor-count #visitCount { color: var(--gold-soft); font-weight: 700; font-size: 1rem; }
+.visitor-count { margin-top: 10px; font-size: .82rem; opacity: .9; letter-spacing: .02em; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.visitor-badge { height: 28px; width: auto; vertical-align: middle; border-radius: 6px; image-rendering: auto; }
 
 /* ---------- Back to top ---------- */
 .to-top { position: fixed; right: 18px; bottom: 18px; width: 46px; height: 46px; border-radius: 50%; border: 0; background: linear-gradient(135deg, var(--accent), var(--maroon)); color: #fff; font-size: 1.3rem; cursor: pointer; box-shadow: var(--shadow-md); opacity: 0; pointer-events: none; transform: translateY(14px); transition: .3s var(--ease); z-index: 800; }
