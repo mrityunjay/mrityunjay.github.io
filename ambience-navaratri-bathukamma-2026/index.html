@@ -481,11 +481,12 @@
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
   <!-- Devotional background music -->
-  <audio id="bgMusic" loop preload="none">
-    <!-- Om Jai Jagdish Hare — royalty-free devotional loop from Internet Archive -->
-    <source src="https://ia803408.us.archive.org/4/items/om-jai-jagdish-hare-simple/om_jai_jagdish_hare.mp3" type="audio/mpeg" />
+  <audio id="bgMusic" loop preload="auto">
+    <!-- Gayatri Mantra — public domain, Wikimedia Commons -->
+    <source src="https://upload.wikimedia.org/wikipedia/commons/2/20/Gayatri_Mantra_as_it_is.ogg" type="audio/ogg" />
   </audio>
   <button class="music-btn" id="musicBtn" aria-label="Play devotional music" title="Play devotional music">🔔</button>
+  <div class="music-toast" id="musicToast">🎵 Tap anywhere for devotional music</div>
 
   <script src="assets/js/main.js"></script>
   <script>
@@ -493,22 +494,27 @@
     (function() {
       const audio = document.getElementById("bgMusic");
       const btn   = document.getElementById("musicBtn");
-      let started = false;
+      const toast = document.getElementById("musicToast");
+
+      audio.volume = 0.28;
+
+      function showToast() {
+        if (!toast) return;
+        toast.classList.add("visible");
+        setTimeout(function() { toast.classList.remove("visible"); }, 4000);
+      }
 
       function startMusic() {
-        if (!started) {
-          // low volume for subtle background ambience
-          audio.volume = 0.22;
-          started = true;
-        }
-        audio.play().then(() => {
+        audio.play().then(function() {
           btn.textContent = "🔕";
           btn.setAttribute("aria-label", "Mute devotional music");
           btn.classList.add("playing");
-        }).catch(() => {});
+          if (toast) toast.style.display = "none";
+        }).catch(function() {});
       }
 
-      btn.addEventListener("click", () => {
+      btn.addEventListener("click", function(e) {
+        e.stopPropagation();
         if (audio.paused) {
           startMusic();
         } else {
@@ -527,6 +533,9 @@
       }
       document.addEventListener("click", autoStart, { once: true });
       document.addEventListener("touchstart", autoStart, { once: true });
+
+      // Show toast after 1.5s so user knows music is ready
+      setTimeout(showToast, 1500);
     })();
   </script>
 

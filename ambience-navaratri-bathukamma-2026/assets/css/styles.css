@@ -45,9 +45,9 @@ body {
   font-family: var(--font-body);
   color: var(--ink);
   background:
-    radial-gradient(1200px 500px at 80% -10%, rgba(224, 163, 38, 0.10), transparent 60%),
-    radial-gradient(900px 500px at -10% 20%, rgba(210, 31, 60, 0.06), transparent 55%),
-    var(--cream);
+    radial-gradient(1200px 500px at 80% -10%, rgba(224, 163, 38, 0.07), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgba(210, 31, 60, 0.04), transparent 55%),
+    #fffdf8;
   line-height: 1.6;
   overflow-x: hidden;
   scroll-padding-top: var(--header-h);
@@ -140,8 +140,8 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 .hero-overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(41,4,14,.62) 0%, rgba(41,4,14,.45) 40%, rgba(86,9,21,.82) 100%),
-    radial-gradient(80% 60% at 70% 20%, rgba(224,163,38,.18), transparent 60%);
+    linear-gradient(180deg, rgba(41,4,14,.38) 0%, rgba(41,4,14,.22) 40%, rgba(86,9,21,.62) 100%),
+    radial-gradient(80% 60% at 70% 20%, rgba(224,163,38,.12), transparent 60%);
 }
 .hero-content { padding: calc(var(--header-h) + 26px) 0 90px; position: relative; }
 .hero-sanskrit { font-family: var(--font-sanskrit); color: var(--gold-soft); font-size: 1.02rem; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
@@ -411,6 +411,14 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
   0%,100% { box-shadow: 0 0 0 0 rgba(224,163,38,.6), var(--shadow-md); }
   50% { box-shadow: 0 0 0 8px rgba(224,163,38,0), var(--shadow-md); }
 }
+.music-toast {
+  position: fixed; left: 72px; bottom: 22px; background: rgba(41,4,14,.88);
+  color: #f4d58d; font-size: .82rem; padding: 8px 14px; border-radius: 999px;
+  border: 1px solid rgba(224,163,38,.4); z-index: 800; pointer-events: none;
+  opacity: 0; transform: translateY(6px); transition: opacity .4s, transform .4s;
+  white-space: nowrap;
+}
+.music-toast.visible { opacity: 1; transform: translateY(0); }
 
 /* ---------- Donation modal + form ---------- */
 .modal {
