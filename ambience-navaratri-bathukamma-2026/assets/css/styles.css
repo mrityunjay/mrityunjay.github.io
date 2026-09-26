@@ -135,13 +135,12 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 /* ---------- Hero ---------- */
 .hero { position: relative; min-height: 100svh; display: flex; align-items: center; color: #fff; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; z-index: -2; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; animation: slowzoom 28s ease-in-out infinite alternate; }
-@keyframes slowzoom { to { transform: scale(1.04); } }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
 .hero-overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(41,4,14,.38) 0%, rgba(41,4,14,.22) 40%, rgba(86,9,21,.62) 100%),
-    radial-gradient(80% 60% at 70% 20%, rgba(224,163,38,.12), transparent 60%);
+    linear-gradient(180deg, rgba(10,4,2,.28) 0%, rgba(10,4,2,.10) 45%, rgba(41,9,14,.55) 100%),
+    radial-gradient(80% 60% at 50% 60%, rgba(224,163,38,.08), transparent 70%);
 }
 .hero-content { padding: calc(var(--header-h) + 26px) 0 90px; position: relative; }
 .hero-sanskrit { font-family: var(--font-sanskrit); color: var(--gold-soft); font-size: 1.02rem; margin-bottom: 12px; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
