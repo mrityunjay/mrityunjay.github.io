@@ -478,61 +478,49 @@
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
   <!-- Devotional background music -->
-  <audio id="bgMusic" loop preload="auto">
+  <audio id="bgMusic" loop preload="auto" muted>
     <!-- Devi Suktham — Vedic hymn to Devi/Durga, public domain, Wikimedia Commons -->
     <source src="https://upload.wikimedia.org/wikipedia/commons/1/1f/04-DEVI_SUKTHAM-MANTRA_MANJUSHA.ogg" type="audio/ogg" />
   </audio>
-  <button class="music-btn" id="musicBtn" aria-label="Play devotional music" title="Play devotional music">🔔</button>
-  <div class="music-toast" id="musicToast">🎵 Tap anywhere for devotional music</div>
+  <button class="music-btn" id="musicBtn" aria-label="Unmute devotional music" title="Unmute devotional music">🔔</button>
+  <div class="music-toast" id="musicToast">🎵 Tap 🔔 to hear devotional music</div>
 
   <script src="assets/js/main.js"></script>
   <script>
-    /* ---- Devotional music toggle ---- */
+    /* ---- Devotional music (muted autoplay → tap to unmute) ---- */
     (function() {
       const audio = document.getElementById("bgMusic");
       const btn   = document.getElementById("musicBtn");
       const toast = document.getElementById("musicToast");
 
-      audio.volume = 0.28;
+      audio.volume = 0.32;
 
-      function showToast() {
-        if (!toast) return;
-        toast.classList.add("visible");
-        setTimeout(function() { toast.classList.remove("visible"); }, 4000);
-      }
+      // Try muted autoplay immediately — allowed by all browsers
+      audio.play().catch(function() {});
 
-      function startMusic() {
-        audio.play().then(function() {
+      // Show unmute toast after 1s
+      setTimeout(function() {
+        if (toast) toast.classList.add("visible");
+        setTimeout(function() { if (toast) toast.classList.remove("visible"); }, 5000);
+      }, 1000);
+
+      btn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        if (audio.muted) {
+          // First unmute: start fresh with volume
+          audio.muted = false;
+          if (audio.paused) audio.play().catch(function() {});
           btn.textContent = "🔕";
           btn.setAttribute("aria-label", "Mute devotional music");
           btn.classList.add("playing");
           if (toast) toast.style.display = "none";
-        }).catch(function() {});
-      }
-
-      btn.addEventListener("click", function(e) {
-        e.stopPropagation();
-        if (audio.paused) {
-          startMusic();
         } else {
-          audio.pause();
+          audio.muted = true;
           btn.textContent = "🔔";
-          btn.setAttribute("aria-label", "Play devotional music");
+          btn.setAttribute("aria-label", "Unmute devotional music");
           btn.classList.remove("playing");
         }
       });
-
-      // Auto-play on first user interaction anywhere on page
-      function autoStart() {
-        if (audio.paused) startMusic();
-        document.removeEventListener("click", autoStart);
-        document.removeEventListener("touchstart", autoStart);
-      }
-      document.addEventListener("click", autoStart, { once: true });
-      document.addEventListener("touchstart", autoStart, { once: true });
-
-      // Show toast after 1.5s so user knows music is ready
-      setTimeout(showToast, 1500);
     })();
   </script>
 
