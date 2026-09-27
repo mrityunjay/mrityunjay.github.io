@@ -106,7 +106,7 @@ const BLOCKS = [
   { b: "F", collector: "Volunteer TBD",     phone: "",           upi: "" },
   { b: "G", collector: "Volunteer TBD",     phone: "",           upi: "" },
   { b: "H", collector: "Volunteer TBD",     phone: "",           upi: "" },
-  { b: "I", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "I", collector: "Bharat Kumar Kaja", phone: "9886841048", upi: "" },
 ];
 
 const GALLERY = [
