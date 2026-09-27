@@ -99,7 +99,7 @@ const CULTURALS = [
 // Per-block collectors. Replace collector/phone/upi with real details.
 const BLOCKS = [
   { b: "A", collector: "Rakesh Kessari",   phone: "7815920402", upi: "7815920402@ybl" },
-  { b: "B", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "B", collector: "Mrityunjay",        phone: "7845148919", upi: "mrityunjay.ranjan.kumar@okhdfcbank" },
   { b: "C", collector: "Rajashekar Peddi", phone: "9966286115", upi: "rajashekar.peddi@hsbc" },
   { b: "D", collector: "Sureka Sanjay",    phone: "9966286115", upi: "Sureka.sannjay123@okicici" },
   { b: "E", collector: "Volunteer TBD",     phone: "",           upi: "" },
