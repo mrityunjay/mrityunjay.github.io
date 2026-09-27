@@ -596,9 +596,10 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
     max-height: calc(100svh - var(--header-h)); overflow-y: auto;
   }
   .nav-menu.open { transform: translateY(0); }
-  .nav-menu a { color: #fff !important; padding: 14px 12px; border-radius: 10px; font-size: 1rem; }
+  .nav-menu a { color: #fff !important; padding: 11px 12px; border-radius: 10px; font-size: .92rem; }
   .nav-menu a:hover { background: rgba(255,255,255,.12) !important; }
-  .nav-cta { margin-top: 8px; text-align: center; }
+  li:has(.nav-cta) { margin-top: 10px; }
+  .nav-cta { display: block !important; background: linear-gradient(120deg, var(--accent), var(--maroon)) !important; color: #fff !important; border-radius: 999px !important; padding: 13px 12px !important; font-weight: 600 !important; letter-spacing: .03em; text-align: center; }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
