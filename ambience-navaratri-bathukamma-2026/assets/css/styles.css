@@ -362,6 +362,10 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 .tier-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: .92rem; color: var(--muted); }
 .tier-list li strong { color: var(--accent); white-space: nowrap; }
 
+.budget-summary { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+.budget-card { background: linear-gradient(135deg, var(--maroon), var(--maroon-deep)); color: #fff; border-radius: var(--radius-sm); padding: 18px 28px; text-align: center; min-width: 160px; box-shadow: var(--shadow-md); }
+.budget-label { display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; opacity: .8; margin-bottom: 6px; }
+.budget-amount { display: block; font-family: var(--font-head); font-size: 1.6rem; font-weight: 700; color: var(--gold-soft); }
 .blocks h3 { color: var(--maroon); margin-bottom: 6px; text-align: center; }
 .blocks-hint { text-align: center; color: var(--muted); font-size: .86rem; margin-bottom: 16px; }
 .blocks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }

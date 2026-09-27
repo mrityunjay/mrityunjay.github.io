@@ -98,15 +98,15 @@ const CULTURALS = [
 
 // Per-block collectors. Replace collector/phone/upi with real details.
 const BLOCKS = [
-  { b: "A", collector: "Collector name", phone: "+910000000000", upi: "blocka@upi" },
-  { b: "B", collector: "Collector name", phone: "+910000000000", upi: "blockb@upi" },
-  { b: "C", collector: "Collector name", phone: "+910000000000", upi: "blockc@upi" },
-  { b: "D", collector: "Collector name", phone: "+910000000000", upi: "blockd@upi" },
-  { b: "E", collector: "Collector name", phone: "+910000000000", upi: "blocke@upi" },
-  { b: "F", collector: "Collector name", phone: "+910000000000", upi: "blockf@upi" },
-  { b: "G", collector: "Collector name", phone: "+910000000000", upi: "blockg@upi" },
-  { b: "H", collector: "Collector name", phone: "+910000000000", upi: "blockh@upi" },
-  { b: "I", collector: "Collector name", phone: "+910000000000", upi: "blocki@upi" },
+  { b: "A", collector: "Rakesh Kessari",   phone: "7815920402", upi: "7815920402@ybl" },
+  { b: "B", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "C", collector: "Rajashekar Peddi", phone: "9966286115", upi: "rajashekar.peddi@hsbc" },
+  { b: "D", collector: "Sureka Sanjay",    phone: "9966286115", upi: "Sureka.sannjay123@okicici" },
+  { b: "E", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "F", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "G", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "H", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "I", collector: "Volunteer TBD",     phone: "",           upi: "" },
 ];
 
 const GALLERY = [
