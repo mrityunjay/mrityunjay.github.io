@@ -506,7 +506,7 @@ function initPetals() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const layer = $(".fx-layer");
   const emojis = ["🌺", "🌼", "🌸", "🪔", "🏵️"];
-  const count = window.innerWidth < 640 ? 9 : 16;
+  const count = window.innerWidth < 640 ? 3 : 5;
   for (let i = 0; i < count; i++) {
     const p = el("span", "petal", emojis[i % emojis.length]);
     p.style.left = Math.random() * 100 + "vw";
