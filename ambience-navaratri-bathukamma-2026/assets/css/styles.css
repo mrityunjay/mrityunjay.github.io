@@ -186,8 +186,10 @@ h1, h2, h3 { font-family: var(--font-head); line-height: 1.12; font-weight: 700;
 @keyframes scrolldot { 0%{opacity:0;transform:translate(-50%,0)} 40%{opacity:1} 80%{opacity:0;transform:translate(-50%,12px)} }
 
 /* ---------- Stats ---------- */
-.stats { background: linear-gradient(120deg, var(--maroon) 0%, var(--maroon-deep) 100%); color: #fff; padding: 34px 0; position: relative; }
-.stats::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(224,163,38,.18) 1px, transparent 1.6px); background-size: 22px 22px; opacity: .5; }
+.stats { background: linear-gradient(120deg, var(--maroon) 0%, var(--maroon-deep) 100%); color: #fff; padding: 34px 0; position: relative; overflow: hidden; }
+.stats::after { content: ""; position: absolute; inset: 0; background: url('../img/diya-2.jpg') center/cover no-repeat; opacity: .13; mix-blend-mode: luminosity; pointer-events: none; }
+.stats::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(224,163,38,.18) 1px, transparent 1.6px); background-size: 22px 22px; opacity: .5; z-index: 1; }
+.stats-grid { position: relative; z-index: 2; }
 .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px 14px; position: relative; text-align: center; }
 .stat-num { display: block; font-family: var(--font-head); font-size: clamp(2rem, 8vw, 3rem); font-weight: 700; color: var(--gold-soft); text-shadow: 0 0 24px rgba(244,213,141,.4); }
 .stat-label { font-size: .8rem; letter-spacing: .6px; opacity: .9; }
