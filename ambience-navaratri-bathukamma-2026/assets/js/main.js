@@ -19,8 +19,8 @@ const CONFIG = {
   // leave "" to show a "Coming soon" state on the site.
   forms: {
     puja:        "https://forms.gle/XfCvJ87piS59FZ3C6",  // Puja registration
-    sponsorship: "",                                     // Sponsorship form
-    saree:       "",                                     // Saree form
+    sponsorship: "https://forms.gle/CxWpn7DH7vDnDooVA",  // Prasadam Sponsor Form
+    saree:       "https://forms.gle/LpLTjft4r9fSfd1QA",  // Saree Sponsor Form
     cultural:    "",                                     // Cultural activity form
   },
 
@@ -304,8 +304,8 @@ function buildForms() {
   if (!grid) return;
   const FORMS = [
     { icon: "🪔", title: "Puja Registration",  desc: "Daily &amp; special poojas, couples pooja and kids Saraswati pooja.", url: CONFIG.forms.puja },
-    { icon: "🙏", title: "Sponsorship",        desc: "Sponsor prasadam, annadanam, flowers, homam and decorations.",       url: CONFIG.forms.sponsorship },
-    { icon: "🥻", title: "Saree Registration", desc: "Sign up for the community saree / dress-code coordination.",          url: CONFIG.forms.saree },
+    { icon: "🙏", title: "Prasadam Sponsor",    desc: "Sponsor prasadam, annadanam, flowers, homam and decorations.",       url: CONFIG.forms.sponsorship },
+    { icon: "🥻", title: "Saree Sponsor",      desc: "Sponsor sarees for the community — dress-code coordination.",         url: CONFIG.forms.saree },
     { icon: "🎭", title: "Cultural Activity",  desc: "Perform on stage — dance, music, drama, Garba &amp; Dandiya.",        url: CONFIG.forms.cultural },
   ];
   FORMS.forEach((f, i) => {
