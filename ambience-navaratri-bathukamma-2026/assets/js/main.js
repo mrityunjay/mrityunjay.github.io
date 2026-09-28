@@ -103,7 +103,7 @@ const BLOCKS = [
   { b: "C", collector: "Rajashekar Peddi", phone: "9491005500", upi: "rajashekar.peddi@hsbc" },
   { b: "D", collector: "Sureka Sanjay",    phone: "9949959775", upi: "Sureka.sannjay123@okicici" },
   { b: "E", collector: "Volunteer TBD",     phone: "",           upi: "" },
-  { b: "F", collector: "Volunteer TBD",     phone: "",           upi: "" },
+  { b: "F", collector: "Soujanya Koppula",  phone: "9885945421", upi: "soujanya.koppula1@okaxis" },
   { b: "G", collector: "Srikanth Vitta",    phone: "",           upi: "srikanthvitta@ybl" },
   { b: "H", collector: "Volunteer TBD",     phone: "",           upi: "" },
   { b: "I", collector: "Bharat Kumar Kaja", phone: "9886841048", upi: "bharatkaza@axl" },
