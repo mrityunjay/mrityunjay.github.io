@@ -154,17 +154,6 @@
       object-position: top center;
       display: block;
     }
-    /* Saree color overlay — hue-rotate + colorize trick */
-    .card-img-wrap .color-overlay {
-      position: absolute;
-      inset: 0;
-      mix-blend-mode: color;
-      opacity: .55;
-      pointer-events: none;
-      transition: opacity .3s;
-    }
-    .card:hover .color-overlay { opacity: .65; }
-
     /* Bottom gradient for text legibility */
     .card-img-wrap::after {
       content: "";
@@ -378,8 +367,7 @@ DAYS.forEach((d, i) => {
 
   card.innerHTML = `
     <div class="card-img-wrap">
-      <img src="assets/img/durga-maa-alankaram.jpg" alt="${d.devi}" loading="lazy" />
-      <div class="color-overlay" style="background:${d.color};"></div>
+      <img src="assets/img/saree-day${i+1}.jpg" alt="${d.devi}" loading="lazy" />
       <div class="card-devi-name">${d.deviTe}</div>
     </div>
     <div class="card-body" style="border-top-color:${accentColor}">
