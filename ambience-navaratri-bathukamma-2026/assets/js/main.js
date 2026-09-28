@@ -151,9 +151,58 @@ function legacyCopy(text) {
   t.remove();
 }
 
+// Telugu names + saree color hex for inline grid (matches saree-day1..10 images)
+const SAREE_META = [
+  { deviTe: "శ్రీ బాలా త్రిపురసుందరీ దేవి", colorHex: "#E87722", colorTe: "కాషాయం" },
+  { deviTe: "శ్రీ గాయత్రీ దేవి",             colorHex: "#1565C0", colorTe: "నీలం" },
+  { deviTe: "శ్రీ అన్నపూర్ణా దేవి",           colorHex: "#F5C518", colorTe: "పసుపు" },
+  { deviTe: "శ్రీ మహాచండీ దేవి",              colorHex: "#C62828", colorTe: "ఎరుపు" },
+  { deviTe: "శ్రీ లలితా త్రిపురసుందరీ దేవి",  colorHex: "#D81B60", colorTe: "గులాబీ" },
+  { deviTe: "శ్రీ సరస్వతీ దేవి",              colorHex: "#888888", colorTe: "తెలుపు" },
+  { deviTe: "శ్రీ మహాలక్ష్మీ దేవి",           colorHex: "#2E7D32", colorTe: "ఆకుపచ్చ" },
+  { deviTe: "శ్రీ దుర్గా దేవి",               colorHex: "#B71C1C", colorTe: "ఎరుపు" },
+  { deviTe: "శ్రీ మహిషాసురమర్దినీ దేవి",      colorHex: "#6D1B35", colorTe: "మెరూన్" },
+  { deviTe: "శ్రీ రాజరాజేశ్వరీ దేవి",         colorHex: "#1B5E20", colorTe: "ఆకుపచ్చ" },
+];
+
+/* ---------- BUILD: Inline Saree Color Grid ---------- */
+function buildSareeGrid() {
+  const grid = $("#sareeInlineGrid");
+  if (!grid) return;
+  const today = new Date();
+  NAVADURGA.forEach((n, i) => {
+    const sm = SAREE_META[i];
+    const cardDate = new Date(2026, 9, 11 + i); // Oct = month 9
+    const isToday = today.toDateString() === cardDate.toDateString();
+    const isPast = today > cardDate && !isToday;
+    const accentColor = sm.colorHex === '#E8E8E8' ? '#888' : sm.colorHex;
+    const card = el("div", "sic reveal" + (isToday ? " today" : "") + (isPast ? " past" : ""));
+    card.style.setProperty("--sic-accent", accentColor);
+    card.style.transitionDelay = (i % 5) * 50 + "ms";
+    card.innerHTML = `
+      <div class="sic-img">
+        <img src="assets/img/saree-day${i + 1}.jpg" alt="${n.name}" loading="lazy" />
+        <div class="sic-devi-te">${sm.deviTe}</div>
+        ${isToday ? '<span class="sic-today-badge">✨ Today</span>' : ''}
+      </div>
+      <div class="sic-body">
+        <div class="sic-date">${n.date}</div>
+        <div class="sic-name">${n.name}</div>
+        <div class="sic-desc">${n.desc}</div>
+        <div class="sic-badge">
+          <span class="sic-dot" style="background:${sm.colorHex};border-color:rgba(0,0,0,.15)"></span>
+          <span class="sic-color-name">${n.color}</span>
+          <span class="sic-color-te">(${sm.colorTe})</span>
+        </div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
 /* ---------- BUILD: Navadurga ---------- */
 function buildNavadurga() {
   const grid = $("#durgaGrid");
+  if (!grid) return;
   NAVADURGA.forEach((n, i) => {
     const card = el("div", "durga-card reveal" + (n.finale ? " finale" : ""));
     card.style.transitionDelay = (i % 3) * 60 + "ms";
@@ -471,6 +520,7 @@ function initPetals() {
 /* ---------- INIT ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   buildNavadurga();
+  buildSareeGrid();
   buildBathukamma();
   buildSchedule();
   buildCulturals();
