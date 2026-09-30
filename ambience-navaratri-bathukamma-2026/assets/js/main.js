@@ -246,6 +246,7 @@ function buildBathukamma() {
 /* ---------- BUILD: Schedule ---------- */
 function buildSchedule() {
   const list = $("#scheduleList");
+  if (!list) return;
   SCHEDULE.forEach((s, i) => {
     const item = el("div", "sched-item reveal");
     item.dataset.type = s.type;
@@ -518,8 +519,6 @@ function initPetals() {
 
 /* ---------- INIT ---------- */
 document.addEventListener("DOMContentLoaded", () => {
-  buildNavadurga();
-  buildSareeGrid();
   buildBathukamma();
   buildSchedule();
   buildCulturals();
