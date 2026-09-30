@@ -218,14 +218,26 @@
   <section class="section schedule" id="schedule">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow reveal">Coming soon</p>
+        <p class="eyebrow reveal">Day by day</p>
         <h2 class="reveal">Festival Schedule</h2>
         <p class="section-lead reveal">
-          The detailed day-by-day schedule for Navaratri &amp; Bathukamma 2026 will be posted here.
-          <br /><br />
-          <strong>TBD</strong>
+          From Kalash Sthapana on 10 October to Vijayadashami on 21 October. Filter by what interests
+          your family. Special poojas need a quick registration — tap Register under Participate.
         </p>
       </div>
+
+      <div class="filter-bar reveal" role="tablist" aria-label="Filter schedule">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="pooja">Pooja</button>
+        <button class="chip" data-filter="bathukamma">Bathukamma</button>
+        <button class="chip" data-filter="cultural">Culturals</button>
+        <button class="chip" data-filter="special">Special</button>
+      </div>
+
+      <div class="timeline" id="scheduleList">
+        <!-- injected by JS -->
+      </div>
+      <p class="note reveal">Programmes are tentative and may shift with final registrations and weather.</p>
     </div>
   </section>
 
