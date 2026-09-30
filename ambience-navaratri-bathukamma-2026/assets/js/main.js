@@ -84,8 +84,6 @@ const SCHEDULE = [
     items: ["Chandi Homam · 8:00 AM", "Ayudha Pooja · 6:00 PM", "Kids Saraswati Pooja · 7:00 PM"] },
   { d: 20, m: "Oct", w: "Tue", type: "special", title: "Vijayadashami · Dussehra — Celebration of Victory",
     items: ["Vijayadashami pooja · 8:00 AM", "Shami Pooja · 6:00 PM", "Ravana Dahan & victory celebration · 7:30 PM"] },
-  { d: 21, m: "Oct", w: "Wed", type: "cultural", title: "Culturals Grand Finale & Community Feast",
-    items: ["Devi Udvasana & Poornahuti · 10:00 AM", "Prize distribution · 7:00 PM", "Community dinner · 8:00 PM"] },
 ];
 
 const CULTURALS = [
@@ -94,7 +92,6 @@ const CULTURALS = [
   { d: 17, m: "Oct", t: "8:00 PM", title: "Grand Garba & Dandiya Finale", desc: "The biggest dance night — dress code: nine colours." },
   { d: 19, m: "Oct", t: "7:00 PM", title: "Kids Saraswati Pooja & Talent Night", desc: "A pooja for the children, followed by young performers." },
   { d: 20, m: "Oct", t: "7:30 PM", title: "Vijayadashami · Ravana Dahan", desc: "Shami pooja, victory celebration and community photograph." },
-  { d: 21, m: "Oct", t: "7:00 PM", title: "Culturals Grand Finale & Feast", desc: "Dance, music, drama, prize distribution and community dinner." },
 ];
 
 // Per-block collectors. Replace collector/phone/upi with real details.
