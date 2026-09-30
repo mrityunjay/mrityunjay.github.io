@@ -518,8 +518,6 @@ function initPetals() {
 
 /* ---------- INIT ---------- */
 document.addEventListener("DOMContentLoaded", () => {
-  buildNavadurga();
-  buildSareeGrid();
   buildBathukamma();
   buildSchedule();
   buildCulturals();
