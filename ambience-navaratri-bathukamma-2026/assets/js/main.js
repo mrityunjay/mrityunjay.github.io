@@ -229,6 +229,7 @@ function applyTheme(n, card) {
 /* ---------- BUILD: Bathukamma ---------- */
 function buildBathukamma() {
   const list = $("#bathuTimeline");
+  if (!list) return;
   BATHUKAMMA.forEach((b, i) => {
     const li = el("li", "bathu-day reveal" + (b.finale ? " finale" : ""));
     li.style.transitionDelay = (i % 2) * 80 + "ms";
@@ -280,6 +281,7 @@ function buildSchedule() {
 /* ---------- BUILD: Culturals ---------- */
 function buildCulturals() {
   const grid = $("#culturalsList");
+  if (!grid) return;
   CULTURALS.forEach((c, i) => {
     const card = el("div", "cult-card reveal");
     card.style.transitionDelay = (i % 2) * 70 + "ms";
@@ -323,6 +325,7 @@ function buildForms() {
 /* ---------- BUILD: Blocks ---------- */
 function buildBlocks() {
   const grid = $("#blocksGrid");
+  if (!grid) return;
   BLOCKS.forEach((blk, i) => {
     const pill = el("button", "block-pill reveal");
     pill.type = "button";
@@ -366,6 +369,7 @@ function showBlock(i, pill) {
 let lbIndex = 0;
 function buildGallery() {
   const grid = $("#galleryGrid");
+  if (!grid) return;
   GALLERY.forEach((g, i) => {
     const item = el("div", "gallery-item reveal" + (g.wide ? " wide" : ""));
     item.style.transitionDelay = (i % 3) * 50 + "ms";
