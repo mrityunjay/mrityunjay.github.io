@@ -86,13 +86,7 @@ const SCHEDULE = [
     items: ["Vijayadashami pooja · 8:00 AM", "Shami Pooja · 6:00 PM", "Ravana Dahan & victory celebration · 7:30 PM"] },
 ];
 
-const CULTURALS = [
-  { d: 14, m: "Oct", t: "8:00 PM", title: "Community Garba Night", desc: "Garba circles for all ages under the lights." },
-  { d: 15, m: "Oct", t: "7:30 PM", title: "Bhajan Sandhya", desc: "Devotional singing led by residents at the Mandapam." },
-  { d: 17, m: "Oct", t: "8:00 PM", title: "Grand Garba & Dandiya Finale", desc: "The biggest dance night — dress code: nine colours." },
-  { d: 19, m: "Oct", t: "7:00 PM", title: "Kids Saraswati Pooja & Talent Night", desc: "A pooja for the children, followed by young performers." },
-  { d: 20, m: "Oct", t: "7:30 PM", title: "Vijayadashami · Ravana Dahan", desc: "Shami pooja, victory celebration and community photograph." },
-];
+const CULTURALS = [];
 
 // Per-block collectors. Replace collector/phone/upi with real details.
 const BLOCKS = [
