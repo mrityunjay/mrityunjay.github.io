@@ -102,6 +102,11 @@ const BLOCKS = [
 ];
 
 const GALLERY = [
+  // 2026 ambience — Day 1 Navaratri
+  { src: "assets/img/2026-day1-1.jpg", cap: "2026 · Day 1 · Maa Shailaputri — beautiful alankaram with marigold arch" },
+  { src: "assets/img/2026-day1-2.jpg", cap: "2026 · Day 1 · Maa with lion — golden decorations &amp; flower arrangements" },
+  { src: "assets/img/2026-day1-3.jpg", cap: "2026 · Day 1 · Close-up — intricate alankaram &amp; jewellery" },
+  { src: "assets/img/2026-day1-4.jpg", cap: "2026 · Day 1 · Full view — puja mandapam with offerings" },
   // 2025 ambience — Navaratri at Ambience Courtyard
   { src: "assets/img/2025-day5.jpg",  cap: "2025 · Day 5 · Maa Skandamata — yellow silk &amp; marigolds", wide: true },
   { src: "assets/img/2025-day8.jpg",  cap: "2025 · Durgashtami · Maa Mahagauri in golden green" },
