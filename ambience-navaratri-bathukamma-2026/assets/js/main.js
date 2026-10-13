@@ -81,7 +81,7 @@ const SCHEDULE = [
   { d: 18, m: "Oct", w: "Sun", type: "special", title: "Day 8 · Durgashtami — Maa Mahagauri (Purple) · Saddula Bathukamma",
     items: ["Durgashtami Homam · 9:00 AM", "Ashtami pooja · 7:00 PM", "Saddula (Pedda) Bathukamma finale · 6:00 PM", "Immersion procession · 8:30 PM"] },
   { d: 19, m: "Oct", w: "Mon", type: "special", title: "Day 9 · Mahanavami — Maa Siddhidatri (Peacock Green)",
-    items: ["Chandi Homam · 8:00 AM", "Ayudha Pooja · 6:00 PM", "Kids Saraswati Pooja · 7:00 PM"] },
+    items: ["Chandi Homam · 8:00 AM", "Ayudha Pooja · 6:00 PM", "Kids Saraswati Pooja · 7:00 PM", "Devi Jagran & Mata Ki Chowki · Evening", "Mahaprasadam · Follows event"] },
   { d: 20, m: "Oct", w: "Tue", type: "special", title: "Vijayadashami · Dussehra — Celebration of Victory",
     items: ["Vijayadashami pooja · 8:00 AM", "Shami Pooja · 6:00 PM", "Ravana Dahan & victory celebration · 7:30 PM"] },
 ];
